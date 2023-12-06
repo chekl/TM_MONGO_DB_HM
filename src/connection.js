@@ -7,7 +7,7 @@ const client = new MongoClient(process.env.DB_URI, {
     version: ServerApiVersion.v1,
     strict: true,
     deprecationErrors: true,
-  }
+  },
 });
 
 const connect = async () => {
@@ -19,7 +19,7 @@ const connect = async () => {
   } catch (error) {
     console.error('Connection to MongoDB Atlas failed!', error);
   }
-}
+};
 
 const close = async () => {
   try {
@@ -29,9 +29,6 @@ const close = async () => {
   } catch (err) {
     console.error('Connection closed error: ', err);
   }
-}
+};
 
-export {
-  connect,
-  close,
-}
+export { connect, close };
